@@ -1,0 +1,5 @@
+for i in range (3):
+	num=eval(input("Type a number: "))
+	print("The square of ", num, " is ", num**num, ".", sep="")
+	
+print("The loop is done.")
