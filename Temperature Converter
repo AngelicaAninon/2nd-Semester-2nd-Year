@@ -1,0 +1,19 @@
+temp=0
+while temp != -1000:
+	temp=eval(input("Enter a temperature (-1000 to quit):"))
+	if temp != -1000:
+		print("In Fahrenheit that is ", 9/5*temp+32)
+	else:
+		print("Bye!")
+		choice = input("Do you want to try again [Y/n]? ")
+while choice == "Y" or choice =="y":
+	temp=0
+	while temp != -1000:
+		temp=eval(input("Enter a temperature (-1000 to quit):"))
+		
+		if temp != -1000:
+			print("In Fahrenheit that is ", 9/5*temp+32)
+			
+		else:
+			print("Bye!")
+			choice = input("Do you want to try again [Y/n]? ")
