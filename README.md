@@ -1,1 +1,3 @@
-This is all the Python ode created during the 2nd semester of the 2nd year.
+This is all the Python code created during the 2nd semester of 2nd year.
+
+(Educational Purposes)
