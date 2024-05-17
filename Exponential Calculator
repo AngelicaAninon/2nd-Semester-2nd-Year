@@ -1,0 +1,13 @@
+print("Welcome to the Exponential Calculator!\n")
+
+while True:
+    base = input("Enter the base value (or 0 to exit): ")
+    if base == '0':
+        print("Thank you for using the Exponential Calculator!\n")
+        print("Goodbye!\n")
+        break
+    exponent = input("Enter the exponent value: ")
+    result = 1
+    for i in range(int(exponent)):
+        result *= int(base)
+    print(base + " to the power of " + exponent + " is " + str(result) + ".")
