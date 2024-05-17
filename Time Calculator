@@ -1,0 +1,28 @@
+x=eval(input("Enter hour:"))
+day=input("Please enter if am (1) or pm (2):")
+hour=eval(input("How many hours ahead?:"))
+
+if day == 'pm' and x != 12: 
+    x += 12;
+elif day == 'am' and x == 12:
+    x = 0;
+    
+if day == '2' and x != 12: 
+    x += 12;
+elif day == '1' and x == 12:
+    x = 0;
+
+new_hour = x + hour;
+new_hour = new_hour % 24;
+    
+if new_hour >= 0 and new_hour < 12:
+    new_hour = new_hour % 12 ;
+    if new_hour == 0:
+        new_hour = 12;
+    print("New hour :", (new_hour), end='am')
+    
+else:
+    new_hour = new_hour % 12;
+    if new_hour == 0:
+        new_hour = 12 ;
+    print("New hour :", (new_hour), end='pm')
