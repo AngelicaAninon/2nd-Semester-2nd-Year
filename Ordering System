@@ -1,0 +1,48 @@
+def main():
+    print("\t\t\t\tSIZZY\n\n")
+    print("---------------------------------------------------------------")
+    print("\tCode\t\tDescription\t\t\tPrice")
+    print("\t[PS]\tPork Sisig with Rice\tP 90.00")
+    print("\t[BS]\tBarkada Sisig\t\t\tP 135.00")
+    print("\t[R]\t\tRice\t\t\t\tP 12.00")
+    print("---------------------------------------------------------------")
+
+    total = 0
+    order = int(input("How many items do you want to purchase? "))
+
+    for _ in range(order):
+        code = input("Enter the code of your choice: ").upper()
+        quantity = int(input("Enter the quantity: "))
+
+        if code == "PS":
+            description = "Pork Sisig with Rice"
+            price = 90
+        elif code == "BS":
+            description = "Barkada Sisig"
+            price = 135
+        elif code == "R":
+            description = "Rice"
+            price = 12
+        else:
+            print("Invalid code!")
+            continue
+
+        ser_total = price * quantity
+        print(f"{quantity} {description} \tP {ser_total:.2f}")
+        total += ser_total
+
+    print("Total Purchase: P", total)
+
+    while True:
+        payment = float(input("Enter Payment Amount: "))
+        if payment < total:
+            print("Insufficient amount. Please enter a valid payment.")
+        else:
+            break
+
+    change = payment - total
+    print("Your change is P", change)
+
+
+if __name__ == "__main__":
+    main()
