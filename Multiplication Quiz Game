@@ -1,0 +1,16 @@
+import random
+score=0
+for i in range(10):
+    x = random.randint(1,10)
+    y = random.randint(1,10)
+    answer=x*y
+    
+    print ("What is", + (x), " x ", + (y), "?")
+    answer=int(input("Your answer: "))
+    if answer == (x*y):
+        print("Correct!")
+        score=score+1
+    else:
+        print("Incorrect! The answer is ", (x*y))
+      
+print("Your score is", (score),"out of 10")
