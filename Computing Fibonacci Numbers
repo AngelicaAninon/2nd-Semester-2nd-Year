@@ -1,0 +1,12 @@
+num=int(input("How many fibonacci num,bers do you want to compute?:"))
+n1, n2, =1,1
+sum=1
+if num<=1:
+    print ("Enter a number greater than 0:")
+else:
+    print (n1, n2, end= " ")
+    for i in range (1, num): 
+        sum=n1+n2
+        n1=n2
+        n2=sum
+        print (sum, end=" ")
